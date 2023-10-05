@@ -1,0 +1,173 @@
+@import 'nav.css';
+@import 'footer.css';
+@import 'product.css';
+
+
+
+
+.hero-section{
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url('../img/backG2.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* .hero-section .logo{
+    height: 150px;
+    display: block;
+    margin: auto;
+} */
+
+.hero-section .subHeading{
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.hero-section .headingLine
+{
+    text-align: center;
+    color: #110e0e;
+    text-transform: capitalize;
+    font-size: 74px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.hero-section .callAction 
+{
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: rgba(47, 136, 107, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 85px;
+    width: 178px;
+    display: block;
+    margin: auto;
+}
+
+
+.product{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.product-category{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+
+/* for form */
+
+.collection-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.collection{
+    position: relative;
+}
+
+
+.collection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.collection input{
+    width: 100%;
+    height: 97%;
+    background-color: rgb(76, 33, 33, 0.6);
+    color: rgb(239, 245, 245);
+    font-size: 0.9em;
+    border: none;
+    border-bottom: solid 2px #cf569c;
+    padding: 1em ;
+}
+
+.collection button
+{
+    width: 100%;
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: rgba(76, 33, 33, 0.5);
+    border: none;
+    outline: none;
+    color: rgb(239, 245, 245);
+    cursor: pointer;
+}
+
+.collectionForm
+{
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 8fr ;
+    gap: 0.9em;
+}
+
+.collectionForm label
+{
+    font-size: 4em;
+    border-bottom: solid 2px #000;
+}
+
+.collectionForm input
+{
+    background-color: rgba(169, 162, 196, 0.6);
+    color: rgb(239, 245, 245);
+    font-size: 0.9em;
+    border: none;
+    border-bottom: solid 2px #414255;
+    padding: 1em ;
+}
+
+.collectionForm button
+{
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: rgba(144, 148, 188, 0.5);
+    border: none;
+    outline: none;
+    color: rgba(58, 56, 67, 0.8);
+    cursor: pointer;
+}
+
+
+.collection:nth-child(3){
+    grid-column: span 2;
+    margin-bottom: 10px;
+}
