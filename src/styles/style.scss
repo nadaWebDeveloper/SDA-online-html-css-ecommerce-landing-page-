@@ -1,13 +1,192 @@
 // src/styles/style.scss
 
-$primary-color: #3498db;
+@import 'nav.css';
+@import 'footer.css';
+@import 'product.css';
 
-body {
-  font-family: Arial, sans-serif;
+
+$subHeadingColor: #fff;
+$headingLineColor: #110e0e;
+$callActionColorB: rgba(47, 136, 107, 0.5);
+$collectionPColor: #fff;
+$collectionInputColor: rgb(239, 245, 245);
+$collectionButtonColorB: rgba(76, 33, 33, 0.5);
+$collectionButtonColor: rgb(239, 245, 245);
+$collectionFormInputColor: rgb(239, 245, 245);
+$collectionFormInputColorB:rgba(169, 162, 196, 0.6) ;
+$collectionFormButtonColorB: rgba(144, 148, 188, 0.5);
+$collectionFormButtonColor: rgba(58, 56, 67, 0.8);
+
+
+
+@mixin space($width, $height)
+{
+  width: $width;
+  height: $height;
 }
 
-.header {
-  background-color: $primary-color;
-  color: white;
-  padding: 1rem;
+
+
+.hero-section{
+   @include space(100%,calc(100vh - 120px) );
+    background-image: url('../img/backG2.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* .hero-section .logo{
+    height: 150px;
+    display: block;
+    margin: auto;
+} */
+
+.hero-section .subHeading{
+    text-align: center;
+    color: $subHeadingColor;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.hero-section .headingLine
+{
+    text-align: center;
+    color: $headingLineColor;
+    text-transform: capitalize;
+    font-size: 74px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.hero-section .callAction 
+{
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: $callActionColorB;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include space(178px, 85px);
+    display: block;
+    margin: auto;
+}
+
+
+.product{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.product-category{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+
+/* for form */
+
+.collection-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.collection{
+    position: relative;
+}
+
+
+.collection img{
+  @include space(100%, 100%);
+    object-fit: cover;
+}
+
+.collection p
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $collectionPColor;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.collection input{
+    @include space(100%, 97%);
+    background-color: rgb(76, 33, 33, 0.6);
+    color: $collectionInputColor;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: solid 2px #cf569c;
+    padding: 1em ;
+}
+
+.collection button
+{
+    width: 100%;
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: $collectionButtonColorB;
+    border: none;
+    outline: none;
+    color: $collectionButtonColor;
+    cursor: pointer;
+}
+
+.collectionForm
+{
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 8fr ;
+    gap: 0.9em;
+}
+
+.collectionForm label
+{
+    font-size: 4em;
+    border-bottom: solid 2px #000;
+}
+
+.collectionForm input
+{
+    background-color: $collectionFormInputColorB;
+    color: $collectionFormInputColor ;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: solid 2px #414255;
+    padding: 1em ;
+}
+
+.collectionForm button
+{
+    border-radius: 1em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: $collectionFormButtonColorB;
+    border: none;
+    outline: none;
+    color: $collectionFormButtonColor;
+    cursor: pointer;
+}
+
+
+.collection:nth-child(3){
+    grid-column: span 2;
+    margin-bottom: 10px;
 }
